@@ -23,7 +23,7 @@ export class Player {
         return this.score;
     }
 
-    addCard(card: Card) {
+    addCard(card: Card ) {
         this.hand.push(card);
     }
 

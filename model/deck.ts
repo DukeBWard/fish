@@ -25,8 +25,15 @@ export class Deck {
         }
     }
 
-    drawCard(): Card | undefined {
-        return this.cards.pop();
+    drawCard(): Card {
+        if (this.cards.length === 0) {
+            throw new Error('No cards left in the deck');
+        } else {
+            return this.cards.pop()!; // non null assertion operator
+        }
+        
     }
 
 }
+
+
