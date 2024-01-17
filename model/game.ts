@@ -1,5 +1,6 @@
 import { Player } from "./player";
 import { Deck } from "./deck";
+import { Card } from "./card";
 
 export class Game {
     private teams: {
@@ -17,30 +18,30 @@ export class Game {
         this.isGameOver = false;
     }
 
-    // private switchPlayer(): void {
+    private switchPlayer(): void {
+
+    }
+
+    public dealCards(deck: Deck, numPlayers: number): void {
+       
+    }
+
+    public playTurn(question: string, requestedCard: Card): void {
+
+    }
+
+    public claimBook(claimingPlayer: number, book: Card[][]): void {
      
-    // }
+    }
 
-    // public dealCards(deck: Deck, numPlayers: number): void {
-
-    // }
-
-    // public playTurn(question: string, requestedCard: Card): void {
-
-    // }
-
-    // public claimBook(claimingPlayer: number, book: Card[][]): void {
-     
-    // }
-
-    // public checkGameOver(): boolean {
+    public checkGameOver(): boolean {
  
-    //     return this.isGameOver;
-    // }
+        return this.isGameOver;
+    }
 
-    // public determineWinner(): string {
+    public determineWinner(): string {
  
-    //     return 'Team 1'; 
-    // }
+        return 'Team 1'; 
+    }
 
 }
