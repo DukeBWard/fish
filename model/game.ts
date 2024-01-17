@@ -7,6 +7,7 @@ export class Game {
         team1: Player[];
         team2: Player[];
     };
+    private players: Player[];
     private currentPlayer: Player | null;
     private remainingBooks: number;
     private isGameOver: boolean;
@@ -18,12 +19,15 @@ export class Game {
         this.isGameOver = false;
     }
 
-    private switchPlayer(): void {
+    public dealCards(deck: Deck, players: Player[]): void {
+        const cardsPerPlayer = players.length === 6 ? 8 : 6;
 
-    }
-
-    public dealCards(deck: Deck, numPlayers: number): void {
-       
+        for (let i = 0; i < cardsPerPlayer; i++) {
+            for (const player of players) {
+                const card = deck.drawCard();
+                player.addCard(card);
+            }
+        }
     }
 
     public playTurn(question: string, requestedCard: Card): void {
