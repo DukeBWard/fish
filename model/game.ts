@@ -17,4 +17,30 @@ export class Game {
         this.isGameOver = false;
     }
 
+    // private switchPlayer(): void {
+     
+    // }
+
+    // public dealCards(deck: Deck, numPlayers: number): void {
+
+    // }
+
+    // public playTurn(question: string, requestedCard: Card): void {
+
+    // }
+
+    // public claimBook(claimingPlayer: number, book: Card[][]): void {
+     
+    // }
+
+    // public checkGameOver(): boolean {
+ 
+    //     return this.isGameOver;
+    // }
+
+    // public determineWinner(): string {
+ 
+    //     return 'Team 1'; 
+    // }
+
 }
